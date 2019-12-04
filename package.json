@@ -15,7 +15,17 @@
     "body-parser": "^1.19.0",
     "chalk": "^3.0.0",
     "cors": "^2.8.5",
-    "ejs": "^2.7.3",
-    "express": "^4.17.1"
-  }
+    "ejs": "^2.7.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.13"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nisreenmali/libraryApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nisreenmali/libraryApp/issues"
+  },
+  "homepage": "https://github.com/nisreenmali/libraryApp#readme"
 }

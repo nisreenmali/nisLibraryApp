@@ -19,21 +19,33 @@ var nav=[
         title:'Add Books'
     },
     {
-        link:'/author/addform',
+        link:'/authors/addform',
         title:'Add Author'
+    },
+    {
+        link:'/signup',
+        title:'SignUp'
+    },
+    {
+        link:'/login',
+        title:'login'
     }
 ];
-var booksRouter=require('./src/routes/booksRouter')(nav);
-var authorRouter=require('./src/rotes/aothorRouter')(nav);
+var booksRouter=require('./routes/booksRouter')(nav);
+var authorRouter=require('./routes/authorRouter')(nav);
+var signupRouter=require('./routes/signupRouter')(nav);
+var loginRouter=require('./routes/loginRouter')(nav);
 
 app.use(express.static(path.join(__dirname,"/public")));
 //to use the style and js and other static files
 app.use( bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/books',booksRouter);
-app.use('/author',authorRouter);
+app.use('/authors',authorRouter);
+app.use('/signup',signupRouter);
+app.use('/login',loginRouter);
 
-app.set('views','./src/views');
+// app.set('views','./src/views');
 app.set('view engine','ejs');
 
 app.get('/',function(req,res){
